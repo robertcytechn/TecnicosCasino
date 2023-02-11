@@ -16,6 +16,7 @@ class MysqlObj{
     public $query;
     public $res;
     public $estatus;
+    public $error;
 
     function __construct(String $query){
         $this->query = $query;
@@ -24,6 +25,7 @@ class MysqlObj{
     private function Ejecutar(){
         $this->res = mysqli_query($GLOBALS["DBConnect"], $this->query);
         $this->estatus = mysqli_sqlstate($GLOBALS["DBConnect"]);
+        $this->error = mysqli_error($GLOBALS["DBConnect"]);
         mysqli_next_result($GLOBALS["DBConnect"]);
 
     }
@@ -43,6 +45,41 @@ class MysqlObj{
  *
 */
 class CyTech{
-
+    /**
+     * Devuelve un array de dos campos que contiene la fecha y hora en formato mysql
+     */
+    public function HoraFecha(): array {
+        return array (date("Y-m-d"),date("H:i:s"));
+    }
+    /**
+     * Devuelve un string codificado en base 64
+     */
+    public function crypt(String $string): String{
+        return base64_encode($string);
+    }
+    /**
+     * Devuelve un string decodificado de uno que ya estab a codificado en base 64
+     */
+    public function Decrypt(String $string): String {
+        return base64_decode($string);
+    }
+    /**
+     * Devuelve un boolean si encuentra o no una sesion activa
+     */
+    public function CheckSession(): bool{
+        if(isset($_COOKIE["CyTechnologies"])){
+            $CySesion = json_decode($this->Decrypt($_COOKIE["CyTechnologies"]));
+            if($CySesion->user > 0){
+                return true;
+            }
+            else{
+                setcookie("CyTechnologies",NULL,time()-27800,"/");
+            }
+        }
+        else{
+            setcookie("CyTechnologies",NULL,time()-27800,"/");
+            return false;
+        }
+    }
 };
 ?>
