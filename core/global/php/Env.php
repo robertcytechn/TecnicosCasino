@@ -23,5 +23,5 @@ const USERNAME = "root";            //Usuario de conexion a la base de datos
 const PASSWORD = "root";        //Contraseña de la base de datos
 const DATABASE = "casino";        //Nombre de la base de datos
 
-const URLSERVER = "http://localhost";     //URL que usara la aplicacion para apuntarse a si misma
+const URLSERVER = "http://localhost/TecnicosCasino";     //URL que usara la aplicacion para apuntarse a si misma
 ?>
