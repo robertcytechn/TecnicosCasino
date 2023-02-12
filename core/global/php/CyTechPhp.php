@@ -1,4 +1,5 @@
 <?php
+require("Env.php");
 global $DBconnect;
 $DBconnect = mysqli_connect(SERVER,USERNAME,PASSWORD,DATABASE) or die(mysqli_error($GLOBALS["link"]));
 mysqli_set_charset($GLOBALS["DBconnect"],"utf8");
@@ -35,7 +36,7 @@ class MysqlObj{
     public function FetchData(){
         return mysqli_fetch_assoc($this->res);
     }
-};
+}
 
 /**
  *
@@ -81,5 +82,5 @@ class CyTech{
             return false;
         }
     }
-};
+}
 ?>
