@@ -1,55 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <title>Pages / Login - Admin Bootstrap Template</title>
-      <meta name="robots" content="noindex, nofollow">
-      <meta content="" name="description">
-      <meta content="" name="keywords">
-      <link href="core/images/cy icon.ico" rel="icon">
-      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-      <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
-      <link href="assets/css/boxicons.min.css" rel="stylesheet">
-      <link href="assets/css/style.css" rel="stylesheet">
-   </head>
-   <body>
-      <main>
-         <div class="container">
-            <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
-               <div class="container">
-                  <div class="row justify-content-center">
-                     <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-                        <div class="d-flex justify-content-center py-4"> <a href="index.html" class="logo d-flex align-items-center w-auto"> <img src="core/images/cy icon.png" alt=""> <span class="d-none d-lg-block">Technologies</span> </a></div>
-                        <div class="card mb-3">
-                           <div class="card-body">
-                              <div class="pt-4 pb-2">
-                                 <h5 class="card-title text-center pb-0 fs-4">Inicia Sesión</h5>
-                                 <p class="text-center small">Ingresa tu usuario y contraseña</p>
-                              </div>
-                              <form class="row g-3">
-                                 <div class="col-12">
-                                    <label for="NickUsername" class="form-label">Usuario</label>
-                                    <div class="input-group">
-                                       <input type="text" name="NickUsername" class="form-control" id="NickUsername" required>
-                                    </div>
-                                 </div>
-                                 <div class="col-12">
-                                    <label for="passordContra" class="form-label">Contraseña</label> <input type="password" name="passordContra" class="form-control" id="passordContra" required>
-                                 </div>
-                                 <div class="col-12"> <button class="btn btn-primary w-100" type="submit">Entrar</button></div>
-                              </form>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </div>
-      </main>
-      <script src="core/global/js/JQuery.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/tinymce.min.js"></script>
-   </body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Cy Technologies">
+    <title>Signin Template · Bootstrap v5.3</title>
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="core/images/cy icon.ico">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="Bootstrap/css/sign-in.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+<main class="form-signin w-100 m-auto">
+
+  <div class="modal fade" id="CyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="contenido-modal-cytech">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <form class="form cytech-form" action="global/php/login.php">
+    <img class="mb-4" src="core/images/cy icon.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Cy Technologies</h1>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" autocomplete="off" placeholder=" " required name="nick">
+      <label for="floatingInput">Usuario:</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" autocomplete="off" placeholder=" " required name="contra">
+      <label for="floatingPassword">Contraseña:</label>
+    </div>
+    <div class="spinner-border visually-hidden" role="status" id="spinner-cytech">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2023</p>
+  </form>
+</main>
+<script src="core/global/js/JQuery.js"></script>
+<script src="Bootstrap/js/bootstrap.min.js"></script>
+<script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="Bootstrap/js/popper.js"></script>
+<script src="core/global/js/CyTechJS.js"></script>
+<script>
+  CyTech.init();
+</script>
+  </body>
 </html>

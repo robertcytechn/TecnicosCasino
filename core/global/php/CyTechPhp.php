@@ -24,10 +24,10 @@ class MysqlObj{
         $this->Ejecutar();
     }
     private function Ejecutar(){
-        $this->res = mysqli_query($GLOBALS["DBConnect"], $this->query);
-        $this->estatus = mysqli_sqlstate($GLOBALS["DBConnect"]);
-        $this->error = mysqli_error($GLOBALS["DBConnect"]);
-        mysqli_next_result($GLOBALS["DBConnect"]);
+        $this->res = mysqli_query($GLOBALS["DBconnect"], $this->query);
+        $this->estatus = mysqli_sqlstate($GLOBALS["DBconnect"]);
+        $this->error = mysqli_error($GLOBALS["DBconnect"]);
+        mysqli_next_result($GLOBALS["DBconnect"]);
 
     }
     public function NumeroFilas(){
@@ -83,4 +83,5 @@ class CyTech{
         }
     }
 }
+$num = new MysqlObj("select * from usuarios");
 ?>
