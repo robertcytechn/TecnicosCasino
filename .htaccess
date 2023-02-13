@@ -1,0 +1,19 @@
+AddDefaultCharset utf-8
+
+php_value max_execution_time 300
+php_value upload_max_filesize 20M
+php_value post_max_size 20M
+
+RewriteEngine On
+
+
+#regla para la pagina de login
+RewriteRule ^login$ login.html?a=$1
+#regla para la pagina de login
+RewriteRule ^$ Dashboard.php?a=$1
+
+
+#Pagina para los clientes Convocatoria
+RewriteRule ^convocatorias/$ convocatorias/verconvocatoriascomocliente.php?a=$1
+#ver documentos de los clientes
+RewriteRule ^lideres/clientesDocs/([^/]*)$ lideres/verDocsCliente.php?a=$1
