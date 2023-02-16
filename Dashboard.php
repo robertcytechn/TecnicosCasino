@@ -1,11 +1,18 @@
+<?php
+require_once("core/global/php/CyTechPhp.php");
+$CyDatos = new CyTech();
+if($CyDatos->CheckSession() == false){
+header("location:".URLSERVER."/login");
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <title>Dashboard Template · Bootstrap v5.3</title>
+    <meta name="description" content="Escritprio de comandos tecnicos">
+    <meta name="author" content="Cy Technologies">
+    <title>Control Casino | Escritorio</title>
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="core/images/cy icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="FontAwesome/css/all.min.css">
@@ -66,15 +73,14 @@
   </head>
   <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Control Casinos</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
+  <div class="navbar-nav d-none d-md-block">
+  <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="#">Cerrar Sesion</a>
+  </div>
   </div>
 </header>
 
@@ -83,14 +89,17 @@
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3 sidebar-sticky">
 
+      <span class="mx-auto d-block" style="min-height: 125px; max-height: 125px; border-radius: 50%; min-width: 125px; max-width: 125px; background: url('core/images/cy logo.svg') center;"></span>
+      <p class="text-center" style="color:#0a58ca">&reg; Cy Technologies &copy; 2019 -2022</p>
+      <hr>
+
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href=" <?php echo URLSERVER; ?> ">
               <span class="fa-solid fa-dashboard fa-2xl"></span> Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="align-text-bottom"></span> Orders</a>
+            <a class="nav-link" href="#"><span class="fa-solid fa-user fa-lg"></span> UserName</a>
           </li>
         </ul>
 
@@ -146,6 +155,7 @@
     </main>
   </div>
 </div>
+
     <script src="Core/global/js/JQuery.js"></script>
     <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="FontAwesome/js/all.min.js"></script>
