@@ -46,6 +46,21 @@ class MysqlObj{
  *
 */
 class CyTech{
+
+    public bool $sesionExist = false;
+    public int $IdUser = 0;
+    public int $IdRol = 0;
+    public int $IdCasino = 0;
+    public string $UserName = "";
+    public string $RolName = "";
+    public string $CasinoName = "";
+
+    public function __construct(){
+        $this->sesionExist=$this->CheckSession();
+        if($this->sesionExist == false){
+            header("location:".URLSERVER."/login");
+            }
+    }
     /**
      * Devuelve un array de dos campos que contiene la fecha y hora en formato mysql
      */
@@ -70,7 +85,13 @@ class CyTech{
     public function CheckSession(): bool{
         if(isset($_COOKIE["CyTechnologies"])){
             $CySesion = json_decode($this->Decrypt($_COOKIE["CyTechnologies"]));
-            if($CySesion->user > 0){
+            if($CySesion->userid > 0){
+                $this->IdUser = $CySesion->userid;
+                $this->IdRol = $CySesion->idrol;
+                $this->IdCasino = $CySesion->idcasino;
+                $this->UserName = $CySesion->nombreusuario;
+                $this->RolName = $CySesion->nombrerol;
+                $this->CasinoName = $CySesion->nombrecasino;
                 return true;
             }
             else{

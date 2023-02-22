@@ -6,12 +6,12 @@ if ($user->NumeroFilas() == 1){
     echo '{"resultado":"ok", "estatus":"alert alert-success", "mensaje":"Iniciando sesion", "redirect":"'.URLSERVER.'", "delay":"1000"}';
     $fetch = $user->FetchData();
     $json = '{
-        "user":"'.$fetch["id_usuarios"].'",
+        "userid":"'.$fetch["id_usuarios"].'",
         "idrol":"'.$fetch["id_roles"].'",
-        "nombreUsuario":"'.$fetch["nombre_usuarios"].'",
-        "nombreRol":"'.$fetch["nombre_roles"].'",
-        "idCasino":"'.$fetch["id_casinos"].'",
-        "nombreCasino":"'.$fetch["nombre_casinos"].'"
+        "nombreusuario":"'.$fetch["nombre_usuarios"].'",
+        "nombrerol":"'.$fetch["nombre_roles"].'",
+        "idcasino":"'.$fetch["id_casinos"].'",
+        "nombrecasino":"'.$fetch["nombre_casinos"].'"
     }';
 
     setcookie("CyTechnologies", base64_encode($json), time() + 86400, "/");

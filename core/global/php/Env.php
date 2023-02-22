@@ -21,7 +21,9 @@ date_default_timezone_set('America/Mexico_City');
 const SERVER = "localhost";         //Servidor de conexion a la base de datos
 const USERNAME = "root";            //Usuario de conexion a la base de datos
 const PASSWORD = "root";        //Contraseña de la base de datos
+//const PASSWORD = "Chido1993$";        //Contraseña de la base de datos
 const DATABASE = "casino";        //Nombre de la base de datos
 
 const URLSERVER = "http://localhost/TecnicosCasino";     //URL que usara la aplicacion para apuntarse a si misma
+//const URLSERVER = "http://cytechn.ddns.net";     //URL que usara la aplicacion para apuntarse a si misma
 ?>

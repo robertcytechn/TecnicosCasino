@@ -1,9 +1,7 @@
 <?php
 require_once("core/global/php/CyTechPhp.php");
 $CyDatos = new CyTech();
-if($CyDatos->CheckSession() == false){
-header("location:".URLSERVER."/login");
-}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -79,7 +77,7 @@ header("location:".URLSERVER."/login");
   </button>
   <div class="navbar-nav d-none d-md-block">
   <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Cerrar Sesion</a>
+      <a class="nav-link px-3" href="#">Cerrar Sesión</a>
   </div>
   </div>
 </header>
@@ -98,42 +96,22 @@ header("location:".URLSERVER."/login");
             <a class="nav-link active" aria-current="page" href=" <?php echo URLSERVER; ?> ">
               <span class="fa-solid fa-dashboard fa-2xl"></span> Dashboard</a>
           </li>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span><?php echo $CyDatos->CasinoName.' <i class="fa-solid fa-arrow-right"></i> '.$CyDatos->RolName; ?></span>
+          </h6>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span class="fa-solid fa-user fa-lg"></span> UserName</a>
+            <a class="nav-link" href="#"><span class="fa-solid fa-user fa-lg"></span> <?php echo $CyDatos->UserName; ?></a>
           </li>
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-          <span>Saved reports</span>
+          <span>Menú de Acciones</span>
           <a class="link-secondary" href="#" aria-label="Add a new report">
             <span data-feather="plus-circle" class="align-text-bottom"></span>
           </a>
         </h6>
         <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span class="align-text-bottom fa-solid fa-user"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text" class="align-text-bottom"></span>
-              Year-end sale
-            </a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#"><span data-feather="file-text" class="align-text-bottom"></span>Mis máquinas</a></li>
         </ul>
       </div>
     </nav>

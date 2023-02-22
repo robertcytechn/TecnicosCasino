@@ -2,6 +2,7 @@ var CyTech = function () {
     "use strict";
     //Url global de sitio
     var url = "http://localhost/TecnicosCasino/";
+    //var url = "http://cytechn.ddns.net/";
     //opcion de debugueo true para encender modo debugging
     var debug = true;
     function clog(texto) {
