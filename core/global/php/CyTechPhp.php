@@ -80,7 +80,7 @@ class CyTech{
         return base64_decode($string);
     }
     /**
-     * Devuelve un boolean si encuentra o no una sesion activa
+     * Devuelve un boolean si encuentra o no una sesión activa
      */
     public function CheckSession(): bool{
         if(isset($_COOKIE["CyTechnologies"])){
@@ -103,6 +103,35 @@ class CyTech{
             return false;
         }
     }
+    /**
+     * Devuelve un String el cual se deberá imprimir para generar el menu izquierdo
+     */
+    public function getMenus(){
+        echo '<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3 sidebar-sticky">
+        <span class="mx-auto d-block" style="min-height: 125px; max-height: 125px; border-radius: 50%; min-width: 125px; max-width: 125px; background: url(\''.URLSERVER.'/core/images/cy logo.svg\') center;"></span>
+        <p class="text-center" style="color:#0a58ca">&reg; Cy Technologies &copy; 2019 -2022</p>
+        <hr>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="'.URLSERVER.'">
+                <span class="fa-solid fa-dashboard fa-2xl"></span> Dashboard</a>
+            </li>
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+              <span>'.$this->CasinoName.'<i class="fa-solid fa-arrow-right"></i> '.$this->RolName.'</span>
+            </h6>
+            <li class="nav-item">
+              <a class="nav-link" href="'.URLSERVER.'/UserInfo/"><span class="fa-solid fa-user fa-lg"></span> '.$this->UserName .'</a>
+            </li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span>Menú de Acciones</span>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/MisMaquinas/"><i class="fa-solid fa-laptop-code"></i> Mis máquinas</a></li>
+          </ul>
+        </div>
+      </nav>';
+    }
 }
-$num = new MysqlObj("select * from usuarios");
 ?>

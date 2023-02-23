@@ -1,16 +1,22 @@
+Header set Access-Control-Allow-Origin "*"
 AddDefaultCharset utf-8
+Options -Indexes
 
 php_value max_execution_time 300
 php_value upload_max_filesize 20M
 php_value post_max_size 20M
+php_value date.timeZone "America/Mexico_City"
 
 RewriteEngine On
-
+#modificar para servidor
+ErrorDocument 404 http://localhost/TecnicosCasino/
 
 #regla para la pagina de login
 RewriteRule ^login$ login.html?a=$1
-#regla para la pagina de login
+#regla para la pagina de dashboard
 RewriteRule ^$ Dashboard.php?a=$1
+#regla para la pagina de MisMaquinas
+RewriteRule ^MisMaquinas/$ MisMaquinas/MaquinasLista.php?a=$1
 
 
 #Pagina para los clientes Convocatoria

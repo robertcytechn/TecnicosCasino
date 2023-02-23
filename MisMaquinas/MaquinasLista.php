@@ -1,5 +1,5 @@
 <?php
-require_once("core/global/php/CyTechPhp.php");
+require_once("../core/global/php/CyTechPhp.php");
 $CyDatos = new CyTech();
 
 ?>
@@ -11,9 +11,11 @@ $CyDatos = new CyTech();
     <meta name="description" content="Escritorio de comandos técnicos">
     <meta name="author" content="Cy Technologies">
     <title>Control Casino | Escritorio</title>
-    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="core/images/cy icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="FontAwesome/css/all.min.css">
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../core/images/cy icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../FontAwesome/css/all.min.css">
+    <link href="../Bootstrap/css/dashboard.css" rel="stylesheet">
+    <link href="../Vendors/DataTables/datatables.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -67,7 +69,6 @@ $CyDatos = new CyTech();
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="Bootstrap/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -84,29 +85,53 @@ $CyDatos = new CyTech();
 
 <div class="container-fluid">
   <div class="row">
-<?php $CyDatos->getMenus(); ?>
+    <?php $CyDatos->getMenus(); ?>
+
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h1 class="h2">Mis Maquinas</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Buscar</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar" class="align-text-bottom"></span>
-            This week
-          </button>
         </div>
       </div>
+
+
+      <div class="card">
+        <div class="card-header"><div id="botones_especiales"></div></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <table id="tabla_lista_noticias" data-link="core/municipios/lista.php" class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>UID</th>
+                    <th>Modelo</th>
+                    <th>Proveedor</th>
+                    <th>Estatus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+          </blockquote>
+        </div>
+      </div>
+
     </main>
   </div>
 </div>
 
-    <script src="Core/global/js/JQuery.js"></script>
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="FontAwesome/js/all.min.js"></script>
-    <script src="Core/global//js/CyTechJS.js"></script>
+    <script src="../Core/global/js/JQuery.js"></script>
+    <script src="../Core/global//js/CyTechJS.js"></script>
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../FontAwesome/js/all.min.js"></script>
+    <script src="../Vendors/DataTables/datatables.min.js"></script>
+    <script>
+      CyTech.init();
+      CyTech.DataTables($("#tabla_lista_noticias"),$("#botones_especiales"));
+    </script>
   </body>
 </html>
