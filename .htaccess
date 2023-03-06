@@ -9,7 +9,7 @@ php_value date.timeZone "America/Mexico_City"
 
 RewriteEngine On
 #modificar para servidor
-ErrorDocument 404 http://localhost/TecnicosCasino/
+#ErrorDocument 404 http://localhost/TecnicosCasino/
 
 #regla para la pagina de login
 RewriteRule ^login$ login.html?a=$1

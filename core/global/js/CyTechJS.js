@@ -62,25 +62,25 @@ var CyTech = function () {
                         extend: "copy",
                         text: '<span class="fa fa-lg fa-copy"></span> Copiar',
                         titleAttr: "Copiar Tabla",
-                        className: "uk-button uk-button-primary"
+                        className: "btn btn-info"
                     },
                     {
                         extend: "excel",
                         text: '<span class="fa fa-lg fa-file-excel"></span> Excel',
                         titleAttr: "Exportar tabla a excel",
-                        className: "uk-button uk-button-primary"
+                        className: "btn btn-success"
                     },
                     {
                         extend: "pdf",
                         text: '<span class="fa fa-lg fa-file-pdf"></span> Pdf',
                         titleAttr: "Exportar tabla a PDF",
-                        className: "uk-button uk-button-primary"
+                        className: "btn btn-danger"
                     },
                     {
                         extend: "print",
                         text: '<span class="fa fa-lg fa-print"></span> Imprimir',
                         titleAttr: "Imprimir la tabla",
-                        className: "uk-button uk-button-secondary"
+                        className: "btn btn-dark"
                     },
                 ],
                 "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "Todas"] ],
@@ -106,10 +106,6 @@ var CyTech = function () {
                 }
             });
             element.buttons().container().appendTo(botones);
-            $(".uk-form-inline > label").addClass("uk-label");
-            $(".uk-form-inline > label").css('width',"auto");
-            $(".dataTables_wrapper > .lista_cantidad > label").addClass("uk-label");
-            $(".dataTables_wrapper > .lista_cantidad > label > select").addClass("uk-select uk-input-dt");
             element.on("draw", function () {
                 botonEliminarDatatables(element);
             });
@@ -118,7 +114,7 @@ var CyTech = function () {
             $(".button_eliminar_datatable").click(function (e) {
                 e.preventDefault();
                 var b = $(this);
-                var i = b.attr("data-idnot");
+                var i = b.attr("data-id");
                 var l = b.attr("data-link");
                 $.ajax({
                     url: url + l,

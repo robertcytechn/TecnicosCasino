@@ -71,6 +71,50 @@ $CyDatos = new CyTech();
     <!-- Custom styles for this template -->
   </head>
   <body>
+
+  <!-- Modal para agregar maquinas -->
+<div class="modal fade" id="ModalAgregarMaquina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar una maquina</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/Bootstrap/hh.php" class="form cytech-form">
+          <label class="form-label">UID de la maquina</label>
+          <input type="number" class="form-control" name="uid_maquina" placeholder="Ejemplo: 325">
+          <label class="form-label">IP de la maquina</label>
+          <input type="text" class="form-control" name="ip_maquina" placeholder="Ejemplo: 172.16.5.23">
+          <label class="form-label">Producto de la maquina</label>
+          <input type="text" class="form-control" name="producto_maquina" placeholder="Ejemplo: BB2 WILLIAMS">
+          <label class="form-label">Serie de la maquina</label>
+          <input type="text" class="form-control" name="serie_maquina" placeholder="Ejemplo: WMS2245785">
+          <label class="form-label">Juego de la maquina</label>
+          <input type="text" class="form-control" name="juego_maquina" placeholder="Ejemplo: Multi-juegos">
+          <hr>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switchEstatus" checked>
+            <label class="form-check-label" for="switchEstatus">La máquina está activa</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switchCluster" checked>
+            <label class="form-check-label" for="switchCluster">La máquina está operativa</label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Control Casinos</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,7 +137,7 @@ $CyDatos = new CyTech();
         <h1 class="h2">Mis Maquinas</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalAgregarMaquina">Agregar</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Buscar</button>
           </div>
         </div>
@@ -104,7 +148,7 @@ $CyDatos = new CyTech();
         <div class="card-header"><div id="botones_especiales"></div></div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <table id="tabla_lista_noticias" data-link="core/municipios/lista.php" class="table table-striped table-hover">
+            <table id="tablaMisMaquinas" data-link="core/utilities/TablaMisMaquinas.php" class="table table-striped table-hover">
                 <thead>
                   <tr>
                     <th>UID</th>
@@ -131,7 +175,7 @@ $CyDatos = new CyTech();
     <script src="../Vendors/DataTables/datatables.min.js"></script>
     <script>
       CyTech.init();
-      CyTech.DataTables($("#tabla_lista_noticias"),$("#botones_especiales"));
+      CyTech.DataTables($("#tablaMisMaquinas"),$("#botones_especiales"));
     </script>
   </body>
 </html>
