@@ -129,6 +129,7 @@ class CyTech{
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/MisMaquinas/"><i class="fa-solid fa-laptop-code"></i> Mis máquinas</a></li>
+            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/Proveedores/"><i class="fa-solid fa-cart-flatbed"></i> Mis Proveedores</a></li>
           </ul>
         </div>
       </nav>';

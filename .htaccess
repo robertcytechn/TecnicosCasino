@@ -17,9 +17,11 @@ RewriteRule ^login$ login.html?a=$1
 RewriteRule ^$ Dashboard.php?a=$1
 #regla para la pagina de MisMaquinas
 RewriteRule ^MisMaquinas/$ MisMaquinas/MaquinasLista.php?a=$1
+#regla para la pagina de MisMaquinas
+RewriteRule ^Proveedores/$ Proveedores/ProveedoresAdmin.php?a=$1
 
 
 #Pagina para los clientes Convocatoria
-RewriteRule ^convocatorias/$ convocatorias/verconvocatoriascomocliente.php?a=$1
+#RewriteRule ^convocatorias/$ convocatorias/verconvocatoriascomocliente.php?a=$1
 #ver documentos de los clientes
-RewriteRule ^lideres/clientesDocs/([^/]*)$ lideres/verDocsCliente.php?a=$1
+#RewriteRule ^lideres/clientesDocs/([^/]*)$ lideres/verDocsCliente.php?a=$1
