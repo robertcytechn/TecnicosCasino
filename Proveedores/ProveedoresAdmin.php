@@ -105,9 +105,6 @@ $CyDatos = new CyTech();
   </div>
 </div>
 
-
-
-
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Control Casinos</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,13 +134,13 @@ $CyDatos = new CyTech();
         <div class="card-header"><div id="botones_especiales"></div></div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <table id="tablaMisMaquinas" data-link="core/utilities/TablaMisMaquinas.php" class="table table-striped table-hover">
+            <table id="tablaMisProveedores" data-link="core/utilities/TablaProveedores.php" class="table table-striped table-hover">
                 <thead>
                   <tr>
-                    <th>UID</th>
-                    <th>Modelo</th>
-                    <th>Proveedor</th>
-                    <th>Estatus</th>
+                    <th>Nombre del proveedor</th>
+                    <th>Teléfono</th>
+                    <th>E-Mail</th>
+                    <th>Razón social</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -164,7 +161,7 @@ $CyDatos = new CyTech();
     <script src="../Vendors/DataTables/datatables.min.js"></script>
     <script>
       CyTech.init();
-      CyTech.DataTables($("#tablaMisMaquinas"),$("#botones_especiales"));
+      CyTech.DataTables($("#tablaMisProveedores"),$("#botones_especiales"));
     </script>
   </body>
 </html>
