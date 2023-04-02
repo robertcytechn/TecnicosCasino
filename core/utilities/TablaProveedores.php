@@ -14,11 +14,15 @@ while ($rows = $proveedores->FetchData()){
     if($cont > 0){
         $resultado .= ',';
     }
+    $btn_estatus = ($rows["estatus"] == 1) ?
+        "<input data-estatus='1' data-id='{$rows["id_proveedores"]}' data-urlAction='core/utilities/cambiarEstatusProveedores.php' class='btnCambiarEstatus form-check-input' type='checkbox' id='switchEstatus' checked> <label class='form-check-label' for='switchEstatus'> Activo</label>" :
+        "<input data-estatus='0' data-id='{$rows["id_proveedores"]}' data-urlAction='core/utilities/cambiarEstatusProveedores.php' class='btnCambiarEstatus form-check-input' type='checkbox' id='switchEstatus'> <label class='form-check-label' for='switchEstatus'> Eliminado</label>" ;
     $resultado .= '[
         "'.$rows["nombre_proveedores"].'",
         "'.$rows["telefono_proveedores"].'",
         "'.$rows["email_proveedores"].'",
-        "'.$rows["razon_social_proveedor"].'"
+        "'.$rows["razon_social_proveedor"].'",
+        "'.$btn_estatus.'"
         ]';
     $cont +=1;
 }

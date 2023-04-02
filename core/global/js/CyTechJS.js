@@ -1,8 +1,8 @@
 var CyTech = function () {
     "use strict";
     //Url global de sitio
-    var url = "http://localhost/TecnicosCasino/";
-    //var url = "http://cytechn.ddns.net/";
+    //var url = "http://localhost/TecnicosCasino/";
+    var url = "http://cytechn.ddns.net/control/";
     //opcion de debugueo true para encender modo debugging
     var debug = true;
     function clog(texto) {
@@ -10,6 +10,27 @@ var CyTech = function () {
             console.log(texto);
         }
     }
+    //Funcion para mostrar notificaciones
+    alertify.defaults.glossary.ok = "Aceptar";
+    alertify.defaults.glossary.cancel = "Cancelar";
+    alertify.defaults.glossary.confirm = "Confirmar";
+    alertify.defaults.glossary.close = "Cerrar";
+    alertify.defaults.glossary.maximize = "Maximizar";
+    alertify.defaults.glossary.minimize = "Minimizar";
+    alertify.defaults.glossary.restore = "Restaurar";
+    alertify.defaults.glossary.input = "Ingresar";
+    alertify.defaults.glossary.select = "Seleccionar";
+    alertify.defaults.transition = "slide";
+    alertify.defaults.theme.ok = "btn btn-primary";
+    alertify.defaults.theme.cancel = "btn btn-danger";
+    alertify.defaults.theme.input = "form-control";
+    alertify.defaults.glossary.title = "Control Casinos";
+    alertify.defaults.notifier.position = "top-right";
+    alertify.defaults.notifier.delay = 5;
+    alertify.defaults.notifier.close = true;
+    alertify.defaults.notifier.pauseOnHover = true;
+    alertify.defaults.notifier.button = true;
+
 
     function NormalForms() {
         $(".cytech-form").submit(function (e) {
@@ -107,28 +128,41 @@ var CyTech = function () {
             });
             element.buttons().container().appendTo(botones);
             element.on("draw", function () {
-                botonEliminarDatatables(element);
+                btnCambiarEstatus(element);
             });
         }
-        function botonEliminarDatatables(tabla) {
-            $(".button_eliminar_datatable").click(function (e) {
-                e.preventDefault();
+    function btnCambiarEstatus(tabla) {
+        $(".btnCambiarEstatus").click(function (e) {
+            e.preventDefault();
+            alerta("draw", "draw", "alert");
                 var b = $(this);
-                var i = b.attr("data-id");
-                var l = b.attr("data-link");
                 $.ajax({
-                    url: url + l,
+                    url: url + b.attr("data-urlAction"),
                     type: "POST",
-                    data: "idnot=" + i,
+                    data: "id=" + b.attr("data-id") + "&estatus=" + b.attr("data-estatus"),
                     async: true,
                     success: function (xhr) {
                         var f = xhr.split("??", 2);
-                        notificacion(f[0], f[1]);
-                        tabla.ajax.reload();
+                        //notificacion(f[0], f[1]);
+                        //tabla.ajax.reload();
                     }
                 });
-             });
-        }
+        });
+    }
+    /**
+     * alerta. función que crea y manipula las alertas usando notiy plugin
+     *
+     * @author	José Roberto Tamayo Montejano
+     * @since	v0.0.1
+     * @version	v1.0.0	Wednesday, Mar 30th, 2023.
+     * @param	titulo	Un string titulo que contiene el titulo a mostrar
+     * @param	mensaje Un string mensaje que contiene el mensaje a mostrar
+     * @param	tipo	Un string tipo  que contiene el tipo de alerta a mostrar (alert | success | error | warning | info)
+     * @return	void    retorna cadena vacía
+     */
+    function alerta(titulo, mensaje, tipo){
+
+    }
 return {
     init: function(){NormalForms();},
     DataTables: function (datatable,botones) {
