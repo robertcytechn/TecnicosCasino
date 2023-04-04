@@ -45,7 +45,7 @@ var CyTech = function () {
             e.preventDefault();
             var form = $(this);
             $.ajax({
-                url: url + "core/" + form.attr("action"),
+                url: url + form.attr("action"),
                 type: "POST",
                 data: form.serialize(),
                 async: true,

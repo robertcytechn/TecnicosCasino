@@ -82,18 +82,18 @@ $CyDatos = new CyTech();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="/Bootstrap/hh.php" class="form cytech-form">
+        <form action="core/utilities/AgregarNuevoProveedor.php" class="form cytech-form" autocomplete="off">
           <label class="form-label">Nombre del Proveedor:</label>
           <input type="text" class="form-control" name="nombre_proveedor" placeholder="Ejemplo: Las del sol" required>
           <label class="form-label">Email del proveedor:</label>
           <input type="email" class="form-control" name="email_proveedor" placeholder="Ejemplo: tec@lasdelsol.com" required>
           <label class="form-label">Teléfono del proveedor:</label>
-          <input type="number" class="form-control" name="email_proveedor" placeholder="Ejemplo: 4421231234" required>
+          <input type="number" class="form-control" name="telefono_proveedor" placeholder="Ejemplo: 4421231234" required>
           <label class="form-label">Razón Social del proveedor:</label>
-          <input type="text" class="form-control" name="email_proveedor" placeholder="Ejemplo: Las del sol SA de CV" required>
+          <input type="text" class="form-control" name="razonS_proveedor" placeholder="Ejemplo: Las del sol SA de CV" required>
           <hr>
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="switchEstatus" checked>
+            <input class="form-check-input" type="checkbox" id="switchEstatus" name="switchEstatus" checked>
             <label class="form-check-label" for="switchEstatus">Activar inmediatamente</label>
           </div>
           <div class="modal-footer">
