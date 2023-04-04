@@ -79,6 +79,7 @@ var CyTech = function () {
             });
         });
     }
+
     /**
      * datatable. función que crea y manipula las tablas usando dataTables plugin
      *
@@ -89,7 +90,7 @@ var CyTech = function () {
      * @param	botones	Un objeto botones un div que va a contener los botones de exportación
      * @return	void    retorna cadena vacía
      */
-        function datatable_ajax(tabla, botones) {
+    function datatable_ajax(tabla, botones) {
             var element = tabla.DataTable({
                 "ajax" : {
                     url: url+tabla.attr("data-link"),
@@ -148,8 +149,9 @@ var CyTech = function () {
             element.on("draw", function () {
                 btnCambiarEstatus(element);
             });
-        }
-        /**
+    }
+
+    /**
      * btnCambiarEstatus. función que cambia el estatus de un registro, enviando el id y el estatus actual al archivo php que se especifica en el atributo data-urlAction del botón
      *
      * @author	José Roberto Tamayo Montejano
@@ -161,17 +163,30 @@ var CyTech = function () {
     function btnCambiarEstatus(tabla) {
         $(".btnCambiarEstatus").click(function (e) {
             e.preventDefault();
-            alerta("draw", "draw", "alert");
                 var b = $(this);
                 $.ajax({
                     url: url + b.attr("data-urlAction"),
                     type: "POST",
                     data: "id=" + b.attr("data-id") + "&estatus=" + b.attr("data-estatus"),
                     async: true,
+                    beforeSend: function () {},
+                    error: function (xhr) {
+                        clog(xhr);
+                        alertify.error("Error al enviar los datos, error en el servidor");
+                    },
                     success: function (xhr) {
-                        var f = xhr.split("??", 2);
-                        //notificacion(f[0], f[1]);
-                        //tabla.ajax.reload();
+                        var json = JSON.parse(xhr);
+                        if (json.estatus == "success") {
+                            alertify.success(json.mensaje);
+                            tabla.ajax.reload();
+                        }
+                        else if (json.estatus == "warning") {
+                            alertify.warning(json.mensaje);
+                            tabla
+                        }
+                        else {
+                            alertify.error(json.mensaje);
+                        }
                     }
                 });
         });
