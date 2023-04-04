@@ -6,11 +6,17 @@ mysqli_set_charset($GLOBALS["DBconnect"],"utf8");
 
 
 /**
+ * Objeto para manejar una consulta o acción a la base de datos mysql
+ * creando un objeto de esta clase se ejecuta la consulta y se almacenan los resultados en las variables de la clase
  *
  * @author José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
  * @param Query $query que se va a ejecutar al crear el objeto
  * @version 5.6
- * @copyright 2018-2023 Cy Technologies
+ * @copyright 2017-2023 Cy Technologies
+ * @var $query String que contiene la consulta a ejecutar
+ * @var $res Variable que contiene el resultado de la consulta
+ * @var $estatus String que contiene el estado de la ejecución de la consulta
+ * @var $error String que contiene el error de la ejecución de la consulta
  *
 */
 class MysqlObj{
@@ -39,10 +45,24 @@ class MysqlObj{
 }
 
 /**
+ * Objeto de control de sesiones y funciones generales, este objeto almacena los datos de la sesión en variables de la clase
+ * y permite el acceso a funciones generales para el sistema
  *
  * @author José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
- * @version 1.0.1
- * @copyright 2018-2023 Cy Technologies
+ * @version 8.2.6
+ * @copyright 2017-2023 Cy Technologies
+ * @var $sesionExist Boolean que indica si existe una sesión activa
+ * @var $IdUser Int que contiene el id del usuario
+ * @var $IdRol Int que contiene el id del rol
+ * @var $IdCasino Int que contiene el id del la sucursal
+ * @var $UserName String que contiene el nombre del usuario
+ * @var $RolName String que contiene el nombre del rol
+ * @var $CasinoName String que contiene el nombre de la sucursal
+ * @method HoraFecha() Devuelve un array de dos campos que contiene la fecha y hora en formato mysql
+ * @method crypt(String $string) Devuelve un string codificado en base 64
+ * @method Decrypt(String $string) Devuelve un string decodificado de uno que ya estaba codificado en base 64
+ * @method CheckSession() Devuelve un boolean si encuentra o no una sesión activa
+ * @method getMenus() Devuelve un String el cual se deberá imprimir para generar el menu izquierdo
  *
 */
 class CyTech{
@@ -74,7 +94,7 @@ class CyTech{
         return base64_encode($string);
     }
     /**
-     * Devuelve un string decodificado de uno que ya estab a codificado en base 64
+     * Devuelve un string decodificado de uno que ya estaba codificado en base 64
      */
     public function Decrypt(String $string): String {
         return base64_decode($string);

@@ -35,7 +35,7 @@ var CyTech = function () {
      * NormalForms. función que envía los formularios de manera normal utilizando ajax
      * serializa los datos y los envía al archivo php que se especifica em el atributo action del formulario
      *
-     * @author	José Roberto Tamayo Montejano
+     * @author	José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
      * @since	v0.0.1
      * @version	v1.0.0	Friday, May 3rd, 2019.
      * @return	void    retorna cadena vacía
@@ -83,7 +83,7 @@ var CyTech = function () {
     /**
      * datatable. función que crea y manipula las tablas usando dataTables plugin
      *
-     * @author	José Roberto Tamayo Montejano
+     * @author	José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
      * @since	v0.0.1
      * @version	v1.0.0	Friday, May 3rd, 2019.
      * @param	tabla	Un objeto tabla seleccionado con jquery
@@ -154,7 +154,7 @@ var CyTech = function () {
     /**
      * btnCambiarEstatus. función que cambia el estatus de un registro, enviando el id y el estatus actual al archivo php que se especifica en el atributo data-urlAction del botón
      *
-     * @author	José Roberto Tamayo Montejano
+     * @author	José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
      * @since	v0.1.2
      * @version	v2.0.0	Friday, May 3rd, 2019.
      * @return	void    retorna cadena vacía
