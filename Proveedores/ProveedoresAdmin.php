@@ -166,7 +166,6 @@ $CyDatos = new CyTech();
     <script>
       CyTech.init();
       CyTech.DataTables($("#tablaMisProveedores"),$("#botones_especiales"));
-      alertify.alert("¡Bienvenido a la sección de proveedores!", function(){ alertify.success('Ok'); });
     </script>
   </body>
 </html>
