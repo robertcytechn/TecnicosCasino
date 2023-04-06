@@ -14,6 +14,10 @@ $CyDatos = new CyTech();
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="core/images/cy icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="FontAwesome/css/all.min.css">
+    <link href="Bootstrap/css/dashboard.css" rel="stylesheet">
+    <link href="Vendors/DataTables/datatables.min.css" rel="stylesheet">
+    <link href="Vendors/Alertify/css/alertify.min.css" rel="stylesheet">
+    <link href="Vendors/Alertify/css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -104,9 +108,14 @@ $CyDatos = new CyTech();
   </div>
 </div>
 
-    <script src="Core/global/js/JQuery.js"></script>
-    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="FontAwesome/js/all.min.js"></script>
-    <script src="Core/global//js/CyTechJS.js"></script>
+<script src="Core/global/js/JQuery.js"></script>
+<script src="Vendors/Alertify/alertify.min.js"></script>
+<script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="FontAwesome/js/all.min.js"></script>
+<script src="Vendors/DataTables/datatables.min.js"></script>
+<script src="Core/global//js/CyTechJS.js"></script>
+<script>
+  CyTech.init();
+</script>
   </body>
 </html>
