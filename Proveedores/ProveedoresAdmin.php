@@ -82,6 +82,9 @@ $CyDatos = new CyTech();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="alert alert-warning" role="alert">
+          <i class="fas fa-exclamation-triangle"></i> <strong>¡Atención!</strong> Los datos que se agreguen a continuación serán guardados en la base de datos, por lo que no se podrán modificar. Verifique que los datos sean correctos antes de continuar.
+        </div>
         <form action="core/utilities/Proveedores/AgregarNuevoProveedor.php" class="form cytech-form" autocomplete="off">
           <label class="form-label">Nombre del Proveedor:</label>
           <input type="text" class="form-control" name="nombre_proveedor" placeholder="Ejemplo: Las del sol" required>
