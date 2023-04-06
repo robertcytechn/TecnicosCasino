@@ -82,7 +82,7 @@ $CyDatos = new CyTech();
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="core/utilities/AgregarNuevoProveedor.php" class="form cytech-form" autocomplete="off">
+        <form action="core/utilities/Proveedores/AgregarNuevoProveedor.php" class="form cytech-form" autocomplete="off">
           <label class="form-label">Nombre del Proveedor:</label>
           <input type="text" class="form-control" name="nombre_proveedor" placeholder="Ejemplo: Las del sol" required>
           <label class="form-label">Email del proveedor:</label>
@@ -136,7 +136,7 @@ $CyDatos = new CyTech();
         <div class="card-header"><div id="botones_especiales"></div></div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <table id="tablaMisProveedores" data-link="core/utilities/TablaProveedores.php" class="table table-striped table-hover">
+            <table id="tablaMisProveedores" data-link="core/utilities/Proveedores/TablaProveedores.php" class="table table-striped table-hover">
                 <thead>
                   <tr>
                     <th>Nombre del proveedor</th>
