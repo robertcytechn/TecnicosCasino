@@ -13,12 +13,18 @@ RewriteEngine On
 
 #regla para la pagina de login
 RewriteRule ^login$ login.html?a=$1
+
 #regla para la pagina de dashboard
 RewriteRule ^$ Dashboard.php?a=$1
+
 #regla para la pagina de MisMaquinas
-RewriteRule ^MisMaquinas/$ MisMaquinas/MaquinasLista.php?a=$1
-#regla para la pagina de MisMaquinas
+RewriteRule ^MisMaquinas/$ MisMaquinas/MaquinasAdmin.php?a=$1
+
+#regla para la pagina de MisProveedores
 RewriteRule ^Proveedores/$ Proveedores/ProveedoresAdmin.php?a=$1
+
+#regla para la pagina de MisProveedores
+RewriteRule ^Modelos/$ Modelos/ModelosAdmin.php?a=$1
 
 
 #Pagina para los clientes Convocatoria

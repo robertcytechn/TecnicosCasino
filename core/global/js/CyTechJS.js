@@ -33,7 +33,7 @@ var CyTech = function () {
 
     /**
      * NormalForms. función que envía los formularios de manera normal utilizando ajax
-     * serializa los datos y los envía al archivo php que se especifica em el atributo action del formulario
+     * serialize los datos y los envía al archivo php que se especifica em el atributo action del formulario
      *
      * @author	José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
      * @since	v0.0.1
@@ -191,8 +191,41 @@ var CyTech = function () {
                 });
         });
     }
+
+    /**
+     * Cargar_Modelos_Select. función que carga los modelos de un select dependiendo del proveedor seleccionado
+     *
+     * @author	José Roberto Tamayo Montejano <robert-cyby@hotmail.com>
+     * @since	v0.0.1
+     * @version	v1.0.0	Friday, May 3rd, 2019.
+     * @return	void    retorna cadena vacía
+     */
+    function Cargar_Modelos_Select() {
+        $(".select-option-change").change(function (e) {
+            var select = $(this);
+            $.ajax({
+                url: url + select.attr("data-link"),
+                type: "POST",
+                data: "id=" + select.val(),
+                async: true,
+                processData: true,
+                beforeSend: function(){
+                },
+                error: function(xhr){
+                    clog(xhr);
+                    alertify.error("Error al enviar los datos, error en el servidor");
+                },
+                success: function(xhr){
+                    clog(xhr);
+                    $(".select-option-load").html(xhr);
+                }
+            });
+        });
+    }
+
+
 return {
-    init: function(){NormalForms();},
+    init: function(){NormalForms(), Cargar_Modelos_Select();},
     DataTables: function (datatable,botones) {
         datatable_ajax(datatable, botones);
     }

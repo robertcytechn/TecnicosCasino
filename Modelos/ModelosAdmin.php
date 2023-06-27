@@ -1,7 +1,6 @@
 <?php
 require_once("../core/global/php/CyTechPhp.php");
 $CyDatos = new CyTech();
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -10,10 +9,10 @@ $CyDatos = new CyTech();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Escritorio de comandos técnicos">
     <meta name="author" content="Cy Technologies">
-    <title>Control Casino | Escritorio</title>
+    <title>Control Casino | Modelos</title>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../core/images/cy icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../FontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="../vendors/FontAwesome/css/all.min.css">
     <link href="../Bootstrap/css/dashboard.css" rel="stylesheet">
     <link href="../Vendors/DataTables/datatables.min.css" rel="stylesheet">
     <link href="../Vendors/Alertify/css/alertify.min.css" rel="stylesheet">
@@ -79,29 +78,35 @@ $CyDatos = new CyTech();
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar una maquina</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar un Proveedor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="/Bootstrap/hh.php" class="form cytech-form">
-          <label class="form-label">UID de la maquina</label>
-          <input type="number" class="form-control" name="uid_maquina" placeholder="Ejemplo: 325">
-          <label class="form-label">IP de la maquina</label>
-          <input type="text" class="form-control" name="ip_maquina" placeholder="Ejemplo: 172.16.5.23">
-          <label class="form-label">Producto de la maquina</label>
-          <input type="text" class="form-control" name="producto_maquina" placeholder="Ejemplo: BB2 WILLIAMS">
-          <label class="form-label">Serie de la maquina</label>
-          <input type="text" class="form-control" name="serie_maquina" placeholder="Ejemplo: WMS2245785">
-          <label class="form-label">Juego de la maquina</label>
-          <input type="text" class="form-control" name="juego_maquina" placeholder="Ejemplo: Multi-juegos">
+        <div class="alert alert-warning" role="alert">
+          <i class="fas fa-exclamation-triangle"></i> <strong>¡Atención!</strong> Los datos que se agreguen a continuación serán guardados en la base de datos, por lo que no se podrán modificar. Verifique que los datos sean correctos antes de continuar.
+        </div>
+        <form action="core/utilities/Modelos/AgregarNuevoModelo.php" class="form cytech-form" autocomplete="off">
+          <label class="form-label">Nombre del Modelo:</label>
+          <input type="text" class="form-control" name="nombre_modelo" placeholder="Ejemplo: G20" required>
+          <label class="form-label">Descripción del Modelo:</label>
+          <input type="text" class="form-control" name="descripcion_modelo" placeholder="Ejemplo: 2 pantallas" required>
+          <label class="form-label">Producto:</label>
+          <input type="text" class="form-control" name="producto_modelo" placeholder="Producto que figura en la NOM" required>
+          <label class="form-label">Proveedor al que pertenece ete modelo:</label>
+          <select class="form-select" name="id_proveedor" required>
+            <option selected value="">Selecciona un proveedor</option>
+            <?php
+            $proveedores_opciones = new MysqlObj("select * from proveedores where estatus_proveedor = 1 and id_casino_fk = ".$CyDatos->IdCasino." order by nombre_proveedor asc");
+            while($proveedor = $proveedores_opciones->FetchData()){
+              echo '<option value="'.$proveedor['id_proveedor'].'">'.$proveedor['nombre_proveedor'].'</option>';
+            }
+            ?>
+          </select>
+
           <hr>
           <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="switchEstatus" checked>
-            <label class="form-check-label" for="switchEstatus">La máquina está activa</label>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="switchCluster" checked>
-            <label class="form-check-label" for="switchCluster">La máquina está operativa</label>
+            <input class="form-check-input" type="checkbox" id="switchEstatus" name="switchEstatus" checked>
+            <label class="form-check-label" for="switchEstatus">Activar inmediatamente</label>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -113,9 +118,6 @@ $CyDatos = new CyTech();
     </div>
   </div>
 </div>
-
-
-
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Control Casinos</a>
@@ -132,31 +134,28 @@ $CyDatos = new CyTech();
 <div class="container-fluid">
   <div class="row">
     <?php $CyDatos->getMenus(); ?>
-
-
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Mis Maquinas</h1>
+        <h1 class="h2">Modelos</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalAgregarMaquina">Agregar</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Buscar</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalAgregarMaquina">Agregar Modelo</button>
           </div>
         </div>
       </div>
-
 
       <div class="card">
         <div class="card-header"><div id="botones_especiales"></div></div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <table id="tablaMisMaquinas" data-link="core/utilities/TablaMisMaquinas.php" class="table table-striped table-hover">
+            <table id="tablaMisModelos" data-link="core/utilities/Modelos/TablaModelos.php" class="table table-striped table-hover">
                 <thead>
                   <tr>
-                    <th>UID</th>
-                    <th>Modelo</th>
+                    <th>Nombre del Modelo</th>
+                    <th>descripción</th>
+                    <th>Producto</th>
                     <th>Proveedor</th>
-                    <th>Estatus</th>
+                    <th>Activo</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -173,12 +172,12 @@ $CyDatos = new CyTech();
     <script src="../Core/global/js/JQuery.js"></script>
     <script src="../Vendors/Alertify/alertify.min.js"></script>
     <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../FontAwesome/js/all.min.js"></script>
+    <script src="../vendors/FontAwesome/js/all.min.js"></script>
     <script src="../Vendors/DataTables/datatables.min.js"></script>
     <script src="../Core/global//js/CyTechJS.js"></script>
     <script>
       CyTech.init();
-      CyTech.DataTables($("#tablaMisMaquinas"),$("#botones_especiales"));
+      CyTech.DataTables($("#tablaMisModelos"),$("#botones_especiales"));
     </script>
   </body>
 </html>
