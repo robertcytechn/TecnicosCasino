@@ -1,0 +1,179 @@
+© 2023 Cy Technologies. Todos los derechos reservados. Control Casino es una marca registrada de Cy Technologies. Ninguna parte de este software puede ser reproducida, 
+distribuida, modificada o transmitida sin el permiso previo y por escrito de Cy Technologies.
+
+
+
+
+
+*****************    Descripcion del producto  *****************
+
+Este software fue creado para llevar el un mejor control de los sucesos que ocurranen el establecimiento, asi como controlar la informacion resultante de las practicas que se realizaran
+en el area tecnica y de sistemas del establecimiento.
+Control de maquinas y sus estatus de mantenimeinto o fallos que presenten.
+Control de los usuarios que usan el software.
+Controlar la informacion de reparacion de las maquinas.
+Controlar la informacion de proveedores de las maquinas, sus numeros de telefono, sus correos electronicos de contacto.
+Dar avisos de mantenimiento preventivo y correctivo de las maquinas.
+Dar avisos de mantenimiento preventivo y correctivo de los equipos de computo.
+Informar sobre los sucesos que ocurran en el establecimiento de manera diaria.
+Informar sobre los estatus de todas las maquinas del establecimiento.
+Informar sobre los estatus de todos los equipos de computo del establecimiento.
+Informar sobre los estatus de todos los usuarios del establecimiento.
+Informar sobre los estatus de todos los proveedores del establecimiento.
+Mostrar informacion imprtante sobre las maquinas, equipos de computo, usuarios y proveedores del establecimiento.
+Mostrar informacion de contacto de los proveedores del establecimiento.
+Otorgar una base de conocimiento donde se adjuntaran manuales de uso y reperacion de las maquinas y equipos de computo del establecimiento.
+Este software incluye todas las funciones mencionadas anteriormente, además de herramientas de inteligencia de negocio para optimizar el manejo de la sala.
+
+
+
+
+*****************    Política de privacidad    *****************
+
+¿Como usamos tus datos personales?
+En Cy Technologies SA de CV de RL, respetamos tu derecho a la privacidad y nos comprometemos a proteger la información personal que nos proporciones.
+En esta Política de Privacidad, te informamos sobre cómo recopilamos y utilizamos tus datos personales cuando utilizas nuestro sitio web y nuestra aplicación móvil,
+en cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento (RLFPDPPP).
+Esta Política de Privacidad se aplica a toda la información personal que nos proporciones o que recopilemos de ti cuando utilices nuestros servicios.
+Te recomendamos que leas detenidamente esta Política de Privacidad y te asegures de que la comprendes. Si no estás de acuerdo con esta Política de Privacidad,
+no utilices nuestros servicios ni nos proporciones tus datos personales.
+
+¿Qué información recopilamos?
+Recopilamos información personal que nos proporcionas directamente, por ejemplo, cuando te registras en nuestro sitio web o aplicación móvil, 
+cuando nos envías un correo electrónico o cuando nos proporcionas información a través de nuestro sitio web o aplicación móvil.
+La información personal que recopilamos incluye tu nombre, dirección de correo electrónico, dirección postal, número de teléfono
+y otra información que nos proporciones al utilizar nuestros servicios.
+No recopilamos informacion personal de menores de edad, si usted es menor de edad no proporcione informacion personal a Cy Technologies SA de CV de RL.
+No recopilamos informacion de geolocalizacion, ni informacion de navegacion, ni informacion de cookies, ni informacion de terceros.
+No recopilamos informacion de redes sociales, ni informacion de terceros.
+No recopilamos informacion de tarjetas de credito, ni debito, ni informacion bancaria, si al utilizar nuestro sitio web o aplicacion movil se le solicita informacion de este tipo,
+NO rellene ningun campo y reportelo a robert-cybyhotmail.com ya que es un intento de fraude y/o suplantacion de identidad.
+
+¿Cómo utilizamos tu información personal?
+Utilizamos tu información personal para proporcionarte nuestros servicios, para responder a tus consultas y para otros fines que se describen en esta Política de Privacidad.
+La información personal que recopilamos nos permite:
+- Crear y administrar tu cuenta.
+- Enviar correos electrónicos de confirmación de registro.
+- Enviarte notificaciones de actualización de nuestros servicios.
+- Enviarte correos electrónicos de servicio al cliente.
+- Enviarte correos electrónicos de marketing.
+- Enviar notificaciones push a tu dispositivo móvil.
+- Enviarte mensajes de texto a tu dispositivo móvil.
+- Enviarte mensajes de WhatsApp a tu dispositivo móvil.
+- Enviar notificaciones importantes
+
+¿Cómo protegemos tu información personal?
+Hemos implementado medidas de seguridad técnicas y organizativas para proteger tu información personal contra pérdida, uso indebido, acceso no autorizado, divulgación, alteración o destrucción.
+Tambien siframos la informacion que nos proporcionas, que usas y que almacenamos en nuestros servidores para protegerla de accesos no autorizados.
+Sin embargo, ten en cuenta que, a pesar de que tomamos medidas para proteger tu información, ningún sitio web, sistema de transmisión de datos, sistema informático o conexión inalámbrica es completamente seguro.
+
+¿Cuáles son tus derechos de privacidad?
+Tienes derecho a solicitar una copia de la información personal que tenemos sobre ti, a corregirla, actualizarla o eliminarla.
+También tienes derecho a solicitar que dejemos de utilizar tu información personal con fines de marketing.
+Si deseas ejercer alguno de estos derechos, comunícate con nosotros a través de la información de contacto que se proporcionó.
+Si tienes una cuenta con nosotros, también puedes acceder a tu información personal y actualizarla en cualquier momento iniciando sesión en tu cuenta.
+
+¿Cómo puedes contactarnos?
+Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad o sobre el uso de tu información personal, comunícate con nosotros a través de la información de contacto que se proporcionó.
+
+¿Compartimos tu informacion personal?
+Cy Technologies SA de CV de RL no comparte tu informacion personal con nadie, ni con ninguna empresa, ni con ningun tercero, ni con ninguna empresa afiliada, ni con ninguna empresa asociada, ni con ninguna empresa subsidiaria, ni con ninguna empresa relacionada, ni con ninguna empresa de terceros.
+Cy Technologies SA de CV de RL no vende tu informacion personal a nadie, ni a ninguna empresa, ni a ningun tercero, ni a ninguna empresa afiliada, ni a ninguna empresa asociada, ni a ninguna empresa subsidiaria, ni a ninguna empresa relacionada, ni a ninguna empresa de terceros.
+Cy Technologies SA de CV de RL no renta tu informacion personal a nadie, ni a ninguna empresa, ni a ningun tercero, ni a ninguna empresa afiliada, ni a ninguna empresa asociada, ni a ninguna empresa subsidiaria, ni a ninguna empresa relacionada, ni a ninguna empresa de terceros.
+Cy Technologies SA de CV de RL no comparte tu informacion personal con ningun solicitante de esta.
+
+
+
+
+*****************    Terminos y condiciones *****************
+
+Este software fue creado para uso unico de sistemas en casino Crown City Morelia y asociados, no se permite la distribucion de este software a terceros sin el consentimiento de Cy Technologies®
+Queda totalmente prohivido el uso de este software sin licencia expedida por Cy Technologies®.
+La manipulacion y/o edicion de este software sin el consentimiento de Cy Technologies® queda totalmente prohibida y es un delito federal.
+Queda totalmente prohivido la toma de captura de video o fotografia de este software.
+Este software esta protegido por derechos de autor y es propiedad de Cy Technologies®. marca registrada.
+Queda totalmente prihibido la venta, renta, traspaso, prestamo o reutilización de de cuentas de este software.
+
+
+¿Que venecifios tengo al adquirir una licencia?
+Al adquirir una licencia de este software usted tiene derecho a usarlo en los equipos que usted desee, siempre y cuando sea para uso personal y no comercial.
+Al adquirir una licencia de este software usted tiene derecho a recibir actualizaciones de este software de manera gratuita.
+Al adquirir una licencia de este software usted tiene derecho a recibir soporte tecnico de este software de manera gratuita.
+Al adquirir una licencia de este software usted tiene derecho a recibir asesoria de este software de manera gratuita.
+Al adquirir una licencia de este software usted tiene derecho a recibir capacitacion de este software de manera gratuita.
+Al adquirir una licencia de este software usted tiene derecho a crear las cuentas de usuario que usted necesite para usar este software.
+Al adquirir una licencia de este software usted tiene derecho a solicitar cambios en el software para adaptarlo a sus necesidades de manera gratuita.
+
+
+¿Que obligaciones tengo al adquirir una licencia?
+Al adquirir una licencia de este software usted se compromete a no distribuir este software a terceros.
+Al adquirir una licencia de este software usted se compromete a no manipular ni editar este software.
+Al adquirir una licencia de este software usted se compromete a no tomar capturas de video o fotografia de este software.
+Al adquirir una licencia de este software usted se compromete a no vender, rentar, traspasar, prestar o reutilizar las cuentas de este software.
+Al adquirir una licencia de este software usted se compromete a no usar este software con fines comerciales.
+Al adquirir una licencia de este software usted se compromete a no usar este software en equipos que no sean de su propiedad.
+Al adquirir una licencia de este software usted se compromete a no usar este software en equipos que no sean de su propiedad sin el consentimiento del propietario.
+Al adquirir una licencia de este software usted se compromete a no usar este software en equipos que no sean de su propiedad sin el consentimiento de Cy Technologies®.
+
+¿Que pasa si no cumplo con mis obligaciones?
+Si usted no cumple con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de cancelar su licencia sin previo aviso y sin reembolso.
+Si usted no cumple con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de eliminar los datos de su cuenta sin previo aviso y sin reembolso.
+Si usted no cumple con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de eliminar su cuenta sin previo aviso y sin reembolso.
+Si usted no cumple con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de eliminar las cuentas de usuario que usted haya creado sin previo aviso y sin reembolso.
+
+¿Que pasa si cancelo mi licencia o decidio pedir la eliminacion de mis cuentas?
+Si usted cancela su licencia o decide pedir la eliminacion de sus cuentas, Cy Technologies® se reserva el derecho de eliminar su cuenta como propietario, las cuentas que usted haya creado
+y los datos de su cuenta tras pasar un timepo de 30 dias despues de la cancelacion de su licencia o despues de que usted haya pedido la eliminacion de sus cuentas.
+
+¿Que pasa si Cy Technologies® cancela mi licencia o decide eliminar mis cuentas?
+Si Cy Technologies® cancela su licencia o decide eliminar sus cuentas, Cy Technologies® se compromete a notificarle con 30 dias de anticipacion para que usted pueda hacer una copia de seguridad de sus datos.
+Al no realizar la copia de seguridad de sus datos, Cy Technologies® no se hace responsable de la perdida de sus datos.
+
+¿Que pasa si deceo reactivar mi licencia?
+Si usted desea reactivar su licencia, Cy Technologies® se compromete a reactivar su licencia sin costo alguno siempre y cuando usted no haya incumplido con sus obligaciones al adquirir una licencia de este software.
+Si usted desea reactivar su licencia, Cy Technologies® se compromete a restaurar los datos de su cuenta completa siempre y cuando no hayan pasado mas de 30 dias despues de la cancelacion de su licencia o despues de que usted haya pedido la eliminacion de sus cuentas.
+
+¿Que pasa si Cy Technologies® cancela mi licencia o decide eliminar mis cuentas y yo deseo reactivar mi licencia?
+Si Cy Technologies® cancela su licencia o decide eliminar sus cuentas y usted desea reactivar su licencia, Cy Technologies® se compromete a reactivar su licencia sin costo alguno siempre y cuando usted no haya incumplido con sus obligaciones al adquirir una licencia de este software.
+Si usted desea reactivar su licencia, Cy Technologies® se compromete a restaurar los datos de su cuenta completa siempre y cuando no hayan pasado mas de 30 dias despues de la cancelacion de su licencia o despues de que usted haya pedido la eliminacion de sus cuentas.
+Si usted ha incumplido con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de reactivar su licencia con un costo adicional.
+Si usted ha incumplido con sus obligaciones al adquirir una licencia de este software, Cy Technologies® se reserva el derecho de restaurar los datos de su cuenta con un costo adicional.
+Cy Technologies® se reserva el derecho de reactivar su licencia de manera permanente o temporal.
+
+¿Que pasa si Cy Technologies® cancelo mi licencia de manera permanente?
+Si Cy Technologies® cancela su licencia de manera permanente, Cy Technologies® se compromete a notificarle con 30 dias de anticipacion para que usted pueda hacer una copia de seguridad de sus datos.
+Al no realizar la copia de seguridad de sus datos, Cy Technologies® no se hace responsable de la perdida de sus datos.
+Si Cy Technologies® cancela su licencia de manera permanente, Cy Technologies® no restaurara la cuenta del propietario, las cuentas que usted haya creado ni los datos de su cuenta.
+
+
+¿Que pasa si Cy Technologies® cancelo mi licencia de manera temporal?
+Si Cy Technologies® cancela su licencia de manera temporal, Cy Technologies® se compromete a no eliminar su cuenta, sus cuentas que usted haya creado ni los datos de su cuenta.
+su cuenta y licencia quedaran suspendidas hasta que Cy Technologies® haga una revicion del estatus de su licencia.
+Cy Technologies® se compromete a notificarle sobre el estatus de su licencia y sus cambios, lo antes posible.
+Una vez que se haya resuelto el estatus de su licencia de manera positiva, Cy Technologies® se compromete a reactivar su licencia y su cuenta sin costo alguno.
+Una vez que se haya resuelto el estatus de su licencia de manera negativa, Cy Technologies® Cancelara su cuenta y su licencia de manera permanente y sin previo aviso.
+
+¿Puedo adquirir una licencia si anteriormente cancelaron mi licencia de manera permanente?
+Si usted desea adquirir una licencia despues de que Cy Technologies® cancelo su licencia de manera permanente, Cy Technologies® se reserva el derecho de otorgarle una licencia.
+Si usted desea adquirir una licencia despues de que Cy Technologies® cancelo su licencia de manera permanente, Cy Technologies® se reserva el derecho de otorgarle una licencia con un costo adicional y con un limite de tiempo y con un limite de uso y con un limite de funciones y con un limite de cuentas y con un limite de equipos y con un limite de usuarios.
+su cuenta quedara en estatus de prueba hasta que Cy Technologies® haga una revicion del estatus de su licencia.
+Cy Technologies® se compromete a notificarle sobre el estatus de su licencia y sus cambios, lo antes posible.
+Una vez que se haya resuelto el estatus de su licencia de manera positiva, Cy Technologies® se compromete a reactivar su licencia y su cuenta sin costo alguno.
+
+¿Puedo adquirir una licencia si anteriormente cancelaron mi licencia de manera temporal?
+Si usted desea adquirir una licencia despues de que Cy Technologies® cancelo su licencia de manera temporal, Cy Technologies® se reserva el derecho de otorgarle una licencia.
+Sera necesaro que cy Technologies® haga una revicion del estatus de su licencia y pueda ser reactivada.
+
+¿Cuantas licencias puedo adquirir?
+Cy Technologies® se reserva el derecho de otorgarle mas de una licencias por establecimiento.
+si desea adquirir una nueva licencia para otro establecimiento debera adquirir una nueva licencia.
+Si desea adquirir una nueva licencia para otro establecimiento debera contactarse con Cy Technologies® para que le sea otorgada una nueva licencia en un nuevo convenio con Cy Technologies®.
+
+¿Que costo tiene una licencia para este software?
+El costo de una licencia para este software no es de una sola cantidad, el costo de una licencia para este software es de una cantidad mensual y sera en convenio con Cy Technologies®.
+El costo de licencia esta suejto a cambios con previo aviso por parte de Cy Technologies®.
+
+
+Cy Technologies®
+José Roberto Tamayo Montejano
+robert-cyby@hotmail.com

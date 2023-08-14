@@ -3,8 +3,6 @@ require("Env.php");
 global $DBconnect;
 $DBconnect = mysqli_connect(SERVER,USERNAME,PASSWORD,DATABASE) or die(mysqli_error($GLOBALS["link"]));
 mysqli_set_charset($GLOBALS["DBconnect"],"utf8");
-
-
 /**
  * Objeto para manejar una consulta o acción a la base de datos mysql
  * creando un objeto de esta clase se ejecuta la consulta y se almacenan los resultados en las variables de la clase
@@ -43,7 +41,6 @@ class MysqlObj{
         return mysqli_fetch_assoc($this->res);
     }
 }
-
 /**
  * Objeto de control de sesiones y funciones generales, este objeto almacena los datos de la sesión en variables de la clase
  * y permite el acceso a funciones generales para el sistema
@@ -66,7 +63,6 @@ class MysqlObj{
  *
 */
 class CyTech{
-
     public bool $sesionExist = false;
     public int $IdUser = 0;
     public int $IdRol = 0;
@@ -79,7 +75,7 @@ class CyTech{
         $this->sesionExist=$this->CheckSession();
         if($this->sesionExist == false){
             header("location:".URLSERVER."/login");
-            }
+         }
     }
     /**
      * Devuelve un array de dos campos que contiene la fecha y hora en formato mysql
@@ -138,19 +134,31 @@ class CyTech{
                 <span class="fa-solid fa-dashboard fa-2xl"></span> Dashboard</a>
             </li>
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-              <span>'.$this->CasinoName.'<i class="fa-solid fa-arrow-right"></i> '.$this->RolName.'</span>
+              <span>'.$this->CasinoName.' <i class="fa-solid fa-arrow-right"></i> '.$this->RolName.'</span>
             </h6>
             <li class="nav-item">
-              <a class="nav-link" href="'.URLSERVER.'/UserInfo/"><span class="fa-solid fa-user fa-lg"></span> '.$this->UserName .'</a>
+              <a class="nav-link" href="'.URLSERVER.'/Perfiles/"><span class="fa-solid fa-user fa-lg"></span> '.$this->UserName .'</a>
             </li>
           </ul>
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-            <span>Menú de Acciones</span>
+            <span>Técnico</span>
           </h6>
           <ul class="nav flex-column mb-2">
             <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/MisMaquinas/"><i class="fa-solid fa-laptop-code"></i> Mis máquinas</a></li>
             <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/Proveedores/"><i class="fa-solid fa-cart-flatbed"></i> Mis Proveedores</a></li>
             <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/Modelos/"><i class="fa-solid fa-tags"></i> Mis Modelos de máquinas</a></li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span>Protocolos</span>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/Pendientes/"><i class="fa-solid fa-list-check"></i> Pendientes</a></li>
+          </ul>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span>Soporte - Ayuda</span>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/SoporteAyuda/"><i class="fa-solid fa-question"></i> Ayuda</a></li>
           </ul>
         </div>
       </nav>';

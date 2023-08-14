@@ -18,13 +18,13 @@ date_default_timezone_set('America/Mexico_City');
  *
  */
 
-//const SERVER = "localhost";         //Servidor de conexión a la base de datos
-const SERVER = "cytechn.ddns.net";         //Servidor de conexión a la base de datos
-const USERNAME = "robert";            //Usuario de conexión a la base de datos
-//const PASSWORD = "root";        //Contraseña de la base de datos
-const PASSWORD = "Chido1993$";        //Contraseña de la base de datos
-const DATABASE = "casino";        //Nombre de la base de datos
+//const SERVER = "localhost";           //Servidor de conexión a la base de datos
+const SERVER = "cytechn.ddns.net";      //Servidor de conexión a la base de datos
+const USERNAME = "robert";              //Usuario de conexión a la base de datos
+//const PASSWORD = "root";              //Contraseña de la base de datos
+const PASSWORD = "Chido1993$";          //Contraseña de la base de datos
+const DATABASE = "casino";              //Nombre de la base de datos
 
 const URLSERVER = "http://localhost/TecnicosCasino";     //URL que usara la aplicación para apuntarse a si misma
-//const URLSERVER = "http://cytechn.ddns.net/control";     //URL que usara la aplicación para apuntarse a si misma
+//const URLSERVER = "http://cytechn.ddns.net";           //URL que usara la aplicación para apuntarse a si misma
 ?>

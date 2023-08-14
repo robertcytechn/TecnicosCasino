@@ -8475,6 +8475,7 @@
 				if ( show ) {
 					row._details.insertAfter( row.nTr );
 					$( row.nTr ).addClass( 'dt-hasChild' );
+					addClass( 'dt-hasChild' );
 				}
 				else {
 					row._details.detach();

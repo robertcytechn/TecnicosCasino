@@ -74,7 +74,7 @@ $CyDatos = new CyTech();
   <body>
 
   <!-- Modal para agregar maquinas -->
-<div class="modal fade" id="ModalAgregarMaquina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="ModalAgregarProveedor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -85,7 +85,7 @@ $CyDatos = new CyTech();
         <div class="alert alert-warning" role="alert">
           <i class="fas fa-exclamation-triangle"></i> <strong>¡Atención!</strong> Los datos que se agreguen a continuación serán guardados en la base de datos, por lo que no se podrán modificar. Verifique que los datos sean correctos antes de continuar.
         </div>
-        <form action="core/utilities/Proveedores/AgregarNuevoProveedor.php" class="form cytech-form" autocomplete="off">
+        <form action="core/utilities/Proveedores/AgregarNuevoProveedor.php" class="form cytech-formAlterTable" autocomplete="off" data-table="tablaMisProveedores" data-modal="ModalAgregarProveedor">
           <label class="form-label">Nombre del Proveedor:</label>
           <input type="text" class="form-control" name="nombre_proveedor" placeholder="Ejemplo: Las del sol" required>
           <label class="form-label">Email del proveedor:</label>
@@ -117,7 +117,7 @@ $CyDatos = new CyTech();
   </button>
   <div class="navbar-nav d-none d-md-block">
   <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Cerrar Sesión</a>
+      <a class="nav-link px-3 cytech-cerrarSesionButton" href="#">Cerrar Sesión</a>
   </div>
   </div>
 </header>
@@ -130,7 +130,7 @@ $CyDatos = new CyTech();
         <h1 class="h2">Proveedores</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalAgregarMaquina">Agregar Proveedor</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#ModalAgregarProveedor">Agregar Proveedor</button>
           </div>
         </div>
       </div>
@@ -165,10 +165,12 @@ $CyDatos = new CyTech();
     <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../vendors/FontAwesome/js/all.min.js"></script>
     <script src="../Vendors/DataTables/datatables.min.js"></script>
-    <script src="../Core/global//js/CyTechJS.js"></script>
+    <script src="../Core/global/js/CyTechJS.js"></script>
     <script>
-      CyTech.init();
-      CyTech.DataTables($("#tablaMisProveedores"),$("#botones_especiales"));
+      $(document).ready(function(){
+        CyTech.init();
+        CyTech.DataTables($("#tablaMisProveedores"),$("#botones_especiales"));
+      });
     </script>
   </body>
 </html>

@@ -68119,6 +68119,8 @@ this.pdfMake = this.pdfMake || {}; this.pdfMake.vfs = {
 				if ( show ) {
 					row._details.insertAfter( row.nTr );
 					$( row.nTr ).addClass( 'dt-hasChild' );
+          CargarCotenidoDiv();
+          btnCambiarEstatus($(this));
 				}
 				else {
 					row._details.detach();

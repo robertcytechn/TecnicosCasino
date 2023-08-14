@@ -23,8 +23,14 @@ RewriteRule ^MisMaquinas/$ MisMaquinas/MaquinasAdmin.php?a=$1
 #regla para la pagina de MisProveedores
 RewriteRule ^Proveedores/$ Proveedores/ProveedoresAdmin.php?a=$1
 
-#regla para la pagina de MisProveedores
+#regla para la pagina de MisModelos
 RewriteRule ^Modelos/$ Modelos/ModelosAdmin.php?a=$1
+
+#regla para la pagina de Perfiles
+RewriteRule ^Perfiles/$ Perfiles/PerfilAdmin.php?a=$1
+
+#regla para la pagina de Perfiles
+RewriteRule ^SoporteAyuda/$ Ayuda/Ayuda.php?a=$1
 
 
 #Pagina para los clientes Convocatoria
