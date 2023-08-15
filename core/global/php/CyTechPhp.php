@@ -126,7 +126,7 @@ class CyTech{
         echo '<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="position-sticky pt-3 sidebar-sticky">
         <span class="mx-auto d-block" style="min-height: 125px; max-height: 125px; border-radius: 50%; min-width: 125px; max-width: 125px; background: url(\''.URLSERVER.'/core/images/cy logo.svg\') center;"></span>
-        <p class="text-center" style="color:#0a58ca">&reg; Cy Technologies &copy; 2017 -2023</p>
+        <p class="text-center" style="color:#0a58ca">Control Casino&reg; Cy Technologies &copy; 2023</p>
         <hr>
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -158,7 +158,7 @@ class CyTech{
             <span>Soporte - Ayuda</span>
           </h6>
           <ul class="nav flex-column mb-2">
-            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/SoporteAyuda/"><i class="fa-solid fa-question"></i> Ayuda</a></li>
+            <li class="nav-item"><a class="nav-link" href="'.URLSERVER.'/SoporteAyuda/"><i class="fa-solid fa-question"></i> Inormación</a></li>
           </ul>
         </div>
       </nav>';
