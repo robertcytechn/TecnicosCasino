@@ -116,7 +116,7 @@ $CyDatos = new CyTech();
                   $masFAllas = new MysqlObj("SELECT r.id_maquina_fk as idmaquinatemp, COUNT(id_reporte) AS total, m.*, mo.* FROM reportes r
                     inner join maquinas m on m.id_maquina = r.id_maquina_fk
                     inner join  modelos mo on mo.id_modelo = m.id_modelo_fk
-                    GROUP BY id_maquina_fk ORDER BY total DESC LIMIT 5");
+                    GROUP BY id_maquina_fk ORDER BY total DESC LIMIT 10");
                   while($masdañadasrow = $masFAllas->FetchData()){
                     echo '<li class="list-group-item d-flex justify-content-between align-items-center">
                       '.$masdañadasrow["uid_maquina"].' - '.$masdañadasrow["producto_modelo"].'

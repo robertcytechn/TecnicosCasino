@@ -136,7 +136,7 @@ $CyDatos = new CyTech();
                                                     <br>
                                                     <strong>Control Casino &reg;</strong> es un software desarrollado por <strong>Cy Technologies</strong> y es propiedad de <strong>Cy Technologies</strong> &copy; 2023
                                                     <br>
-                                                    Version <strong class="text-danger">Alpha 1.3.2</strong>
+                                                    Version <strong class="text-danger">Alpha 1.3.6</strong>
 
                                                 </div>
                                             </div>
