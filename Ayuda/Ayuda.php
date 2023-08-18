@@ -11,7 +11,7 @@ $CyDatos = new CyTech();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Escritorio de comandos técnicos">
     <meta name="author" content="Cy Technologies">
-    <title>Control Casino | Escritorio</title>
+    <title>Control Casino | Información y ayuda</title>
     <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../core/images/cy icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../vendors/FontAwesome/css/all.min.css">
