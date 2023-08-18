@@ -29,11 +29,14 @@ RewriteRule ^Modelos/$ Modelos/ModelosAdmin.php?a=$1
 #regla para la pagina de Perfiles
 RewriteRule ^Perfiles/$ Perfiles/PerfilAdmin.php?a=$1
 
-#regla para la pagina de Perfiles
+#regla para la pagina de SoporteAyuda
 RewriteRule ^SoporteAyuda/$ Ayuda/Ayuda.php?a=$1
 
 #regla para la pagina de reportes
 RewriteRule ^ReportarBugs/$ ReportesBugs/ReportesBugsAdmin.php?a=$1
+
+#regla para la pagina de Pendientes
+RewriteRule ^Pendientes/$ Pendientes/PendientesAdmin.php?a=$1
 
 
 #Pagina para los clientes Convocatoria

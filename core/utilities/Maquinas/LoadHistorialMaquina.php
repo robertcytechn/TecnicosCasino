@@ -47,15 +47,14 @@ else{
         while($pruebas = $historialPruebas->FetchData()){
             $contend .= '<li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
-        <div class="fw-bold">'.$pruebas["nombre_usuario"].'</div>
+        <div class="fw-bold">'.$pruebas["nombre_usuario"].' <span>'.$pruebas["f_prueba"].' / '.$pruebas["h_prueba"].'</span></div>
             '.$pruebas["descripcion_prueba"].'
         </div>
         </li>';
     }
         $contend .= '<li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
-    <div class="fw-bold">'.$reportes["nombre_usuario"].'</div>
-        '.$reportes["descripcion_reporte"].'
+            <div class="fw-bold">'.$reportes["nombre_usuario"].' (Fecha de creación del reporte)</div>'.$reportes["descripcion_reporte"].'
     </div>
     </li>';
         $contend .= '</ol></div></div>';
