@@ -111,7 +111,7 @@ $CyDatos = new CyTech();
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="descripcionReporte"><i class="fa-solid fa-meteor fa-xl"></i></span>
                                                 </div>
-                                                <input aria-describedby="descripcionReporte" type="text" class="form-control" name="nueva_contra" placeholder="Ejemplo: No se agregan proveedores" required minlength="8">
+                                                <input aria-describedby="descripcionReporte" type="text" class="form-control" name="descripcioncorta" placeholder="Ejemplo: No se agregan proveedores" required minlength="8">
                                             </div>
 
                                             <label class="form-label">Descripcion detallada del problema:</label>
@@ -124,7 +124,7 @@ $CyDatos = new CyTech();
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <p class="bg-info">¡Hola! En esta ventana podrás reportar alguna falla en la plataforma te dejamos un ejemplo de como deberá ser rellenado el formulario
+                                <p class="bg-info"><br>¡Hola! En esta ventana podrás reportar alguna falla en la plataforma te dejamos un ejemplo de como deberá ser rellenado el formulario
                                     <br>
                                     Descripción corta: No se puede agregar proveedores
                                     <br><br>
@@ -134,9 +134,16 @@ $CyDatos = new CyTech();
                                     <br>•	La pantalla no muestra nada en pantalla y tampoco se agrega un proveedor
                                     <br>•	Esta falla comenzó en la última actualización
                                     <br>•	Funcionaba bien en la versión 1.2.3
+                                    <br> Coloca una explicación lo mas detallada posible para poder resolver el problema de manera mas sencilla y rápida
+                                    <br>¡Gracias por tu ayuda!
+                                    <br> &nbsp;
                                 </p>
-
-                                <p class="bg-dark"></p>
+                                <p class="bg-dark text-white">
+                                    <br>
+                                    ¡Siéntete con la libertad de reportar todos los bugs, o problemas que consideres tu ayuda nos es muy necesaria de antemano muchas gracias!
+                                    <br>Estamos trabajando diariamente para que este software sea lo mas completo y estable posible.
+                                    <br> &nbsp;
+                                </p>
                             </div>
 
                         </div>

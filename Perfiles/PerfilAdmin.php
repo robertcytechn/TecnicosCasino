@@ -221,7 +221,7 @@ $CyDatos = new CyTech();
                                                     </div>
                                                     <hr class="hr" />
 
-                                                    <label class="form-label">Contraseña Anterior o actual:</label>
+                                                    <label class="form-label">Contraseña actual:</label>
                                                         <div class="input-group mb-3">
                                                             <div class="input-group-prepend">
                                                             <span class="input-group-text" id="contraAnterior"><i class="fa-solid fa-user-shield fa-xl"></i></span>
